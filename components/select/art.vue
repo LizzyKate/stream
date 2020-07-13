@@ -7,8 +7,10 @@
             <img :src="`img/${art.img}`" alt="" class="w-100" />
           </n-link>
           <div class="p-2 bd-highlight __word">
-            <h6>{{ art.album }}</h6>
-            <p class="mb-0">{{ art.name }}</p>
+            <n-link :to="'/album/' + art.name">
+              <h6>{{ art.album }}</h6>
+              <p class="mb-0">{{ art.name }}</p>
+            </n-link>
           </div>
         </div>
       </div>

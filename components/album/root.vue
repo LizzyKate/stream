@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Banner :image="currentSong.img" />
+    <Banner :image="currentSong.img" :album="currentSong.album" />
     <List :name="currentSong.name" :picture="currentSong.img" />
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
       Artist: [
         {
           img: 'bob.jpg',
-          album: 'Album',
+          album: 'No Woman, No cry',
           name: 'Bob Marley',
         },
         {

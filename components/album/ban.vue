@@ -16,7 +16,7 @@
       class="d-flex flex-row bd-highlight justify-content-center align-items-center __track"
     >
       <div class="p-2 bd-highlight">
-        <h6 class="text-white text-center">Album</h6>
+        <h6 class="text-white text-center">{{ album }}</h6>
         <client-only>
           <audio controls>
             <source
@@ -32,7 +32,16 @@
 
 <script>
 export default {
-  props: ['image'],
+  props: {
+    image: {
+      type: String,
+      required: true,
+    },
+    album: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 <style></style>

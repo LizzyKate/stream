@@ -43,6 +43,11 @@ body {
 .__word {
   align-self: center;
 }
+.__word h6,
+.__word p {
+  color: black !important;
+  text-decoration: none !important;
+}
 .__album {
   background-image: url('/img/hqdefault.jpg');
   height: 308px;
