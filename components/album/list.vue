@@ -14,13 +14,13 @@
           >
             <div class="bd-highlight">
               <img
-                :src="`/img/${play.image}`"
+                :src="`/img/${picture}`"
                 class="rounded-circle __profile"
                 alt=""
               />
             </div>
             <div class="bd-highlight ml-3 __pick">
-              <h6>{{ play.name }}</h6>
+              <h6>{{ name }}</h6>
               <p class="mb-0">{{ play.title }}</p>
             </div>
           </div>
@@ -36,6 +36,16 @@
 
 <script>
 export default {
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+    picture: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       album: [

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Banner />
-    <List />
+    <Banner :image="currentSong.img" />
+    <List :name="currentSong.name" :picture="currentSong.img" />
   </div>
 </template>
 
@@ -12,6 +12,47 @@ export default {
   components: {
     Banner,
     List,
+  },
+  data() {
+    return {
+      Artist: [
+        {
+          img: 'bob.jpg',
+          album: 'Album',
+          name: 'Bob Marley',
+        },
+        {
+          img: 'pearl.jpg',
+          album: 'Album',
+          name: 'Pearl Jam',
+        },
+        {
+          img: 'nir.jpg',
+          album: 'Album',
+          name: 'Nirvirna',
+        },
+        {
+          img: 'bob.jpg',
+          album: 'Album',
+          name: 'Bob Marley',
+        },
+        {
+          img: 'pearl.jpg',
+          album: 'Album',
+          name: 'Pearl Jam',
+        },
+        {
+          img: 'nir.jpg',
+          album: 'Album',
+          name: 'Nirvirna',
+        },
+      ],
+    }
+  },
+  computed: {
+    currentSong() {
+      return this.Artist.find((e) => e.name === this.$route.params.id)
+    },
   },
 }
 </script>

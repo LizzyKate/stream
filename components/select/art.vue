@@ -3,9 +3,9 @@
     <div class="d-flex flex-column bd-highlight mb-3 __grid-container">
       <div v-for="(art, i) in Artist" :key="i" class="p-2 bd-highlight">
         <div class="d-flex flex-row bd-highlight __item">
-          <div class="p-2 bd-highlight __grid">
+          <n-link :to="'/album/' + art.name" class="p-2 bd-highlight __grid">
             <img :src="`img/${art.img}`" alt="" class="w-100" />
-          </div>
+          </n-link>
           <div class="p-2 bd-highlight __word">
             <h6>{{ art.album }}</h6>
             <p class="mb-0">{{ art.name }}</p>

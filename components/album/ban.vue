@@ -1,10 +1,12 @@
 <template>
-  <div class="__album">
+  <div class="__album" :style="{ backgroundImage: `url(/img/${image})` }">
     <div
       class="d-flex flex-row bd-highlight justify-content-between align-items-center mb-3"
     >
       <div class="p-2 bd-highlight ml-3">
-        <i class="fas fa-less-than text-white"></i>
+        <nuxt-link to="/">
+          <i class="fas fa-less-than text-white"></i>
+        </nuxt-link>
       </div>
       <div class="p-2 bd-highlight mr-3">
         <i class="fas fa-search text-white"></i>
@@ -29,6 +31,8 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['image'],
+}
 </script>
 <style></style>
