@@ -20,41 +20,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      Artist: [
-        {
-          img: 'bob.jpg',
-          album: 'Album',
-          name: 'Bob Marley',
-        },
-        {
-          img: 'pearl.jpg',
-          album: 'Album',
-          name: 'Pearl Jam',
-        },
-        {
-          img: 'nir.jpg',
-          album: 'Album',
-          name: 'Nirvirna',
-        },
-        {
-          img: 'bob.jpg',
-          album: 'Album',
-          name: 'Bob Marley',
-        },
-        {
-          img: 'pearl.jpg',
-          album: 'Album',
-          name: 'Pearl Jam',
-        },
-        {
-          img: 'nir.jpg',
-          album: 'Album',
-          name: 'Nirvirna',
-        },
-      ],
-    }
+  computed: {
+    Artist() {
+      return this.$store.state.artist.New
+    },
   },
 }
 </script>

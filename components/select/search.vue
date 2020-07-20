@@ -3,14 +3,14 @@
     <div
       class="d-flex flex-row bd-highlight my-3 mx-3 justify-content-between bg-black"
     >
-      <div
-        v-for="(look, i) in search"
-        :key="i"
-        :class="{ create: look.code === choose }"
-        class="p-2 bd-highlight __pop"
-        @click="change(look.code)"
-      >
-        {{ look.see }}
+      <div class="p-2 bd-highlight __pop" @click="recent()">
+        New
+      </div>
+      <div class="p-2 bd-highlight __pop">
+        Popular
+      </div>
+      <div class="p-2 bd-highlight __pop">
+        Old
       </div>
     </div>
   </div>
@@ -19,27 +19,14 @@
 <script>
 export default {
   data() {
-    return {
-      choose: 'popular',
-      search: [
-        {
-          code: 'new',
-          see: 'New',
-        },
-        {
-          code: 'popular',
-          see: 'Popular',
-        },
-        {
-          code: 'old',
-          see: 'Old',
-        },
-      ],
-    }
+    return {}
   },
   methods: {
     change(word) {
       this.choose = word
+    },
+    recent() {
+      this.$store.dispatch('artist/recent')
     },
   },
 }
