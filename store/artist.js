@@ -31,6 +31,7 @@ export const state = () => ({
     // },
   ],
   popular: [],
+  hello: "hi",
   old: [],
 })
 
